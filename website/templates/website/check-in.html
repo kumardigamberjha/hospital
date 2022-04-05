@@ -1,0 +1,15 @@
+{% extends 'website/index.html' %}
+
+{% block content %}
+    <h1 class="heading_h1">Check In</h1>
+
+    <form action="" method="post">
+        {% csrf_token %}
+
+        {{form}}
+        <br>
+        <input type="submit" value="submit" class="sub-btn">
+    </form>
+{% endblock content %}
+
+

@@ -1,0 +1,43 @@
+{% extends 'website/index.html' %}
+
+{% block content %}
+    <h1 class="heading_h1">Check Out Form</h1>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        
+        {{form}}
+        <br>
+        <input type="submit" value="submit" class="sub-btn">
+    </form>
+    {% endblock content %}
+
+    {% block data %}
+    <section class="data">
+        <h2 class="heading_h1">Our Records</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>User</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Disease</th>
+                <th>Check In</th>
+                <th>Check Out</th>
+
+            </tr>
+            {% for i in checked_out %}
+            <tr>
+                <td>{{i.chkins.user.id}}</td>
+                <td>{{i.chkins.user.name}}</td>
+                <td>{{i.chkins.user.phn}}</td>
+                <td>{{i.chkins.user.email}}</td>
+                <td>{{i.chkins.user.disease}}</td>
+                <td>{{i.chkins.chkin_date}}</td>
+                <td>{{i.chkout_date}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </section>        
+    {% endblock data %}
+    

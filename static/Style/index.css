@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-bg: #12173d;
+    --color-bg1: rgb(21, 21, 109);
+    --color-bg2: rgb(28, 28, 54);
+}
+body{
+    background-color: var(--color-bg2);
+}
+.heading_h1{
+    text-align: center;
+    padding: 15px;
+    color: orangered;
+    font-family: sans-serif;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+
+    list-style: none;
+}
+nav{
+    display: flex;
+    height: 60px;
+    position: sticky;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--color-bg1);
+}
+nav h3{
+    padding: 10px;
+}
+nav h3 a{
+    text-decoration: none;
+    color: white;
+}
+nav h3 a:hover{
+    color: chocolate;
+}
+nav ul li{
+    padding: 15px;
+}
+nav ul a{
+    color: white;
+    text-decoration: none;
+}
+nav ul a:hover{
+    color: orange;
+}
+.options{
+    margin-top: 5rem;
+    padding: 25px;
+    justify-content: center;
+    margin-left: 25rem;
+
+}
+.options .btns{
+    margin: 25px;
+    margin-left: 5rem;
+}
+.options a{
+    text-decoration: none;
+    color: white;
+    border: 1px ridge blue;
+    padding: 20px 55px;
+    border-radius: 33px;
+    margin: 8px;
+}
+.options a:hover{
+    color: white;
+    background-color: blue;
+}
+footer{
+    margin-top: 52vh;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background: var(--color-bg1);
+    align-items: center;
+    width: 100%;
+}
+.data{
+    margin-top: 5rem;
+}
+table{
+
+    width: 80%;
+    margin: auto;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 10px;
+}
+table tr{
+    padding: 25px;
+}
+table tr th{
+    border-bottom: 3px ridge black;
+    color: blue;
+    padding: 25px 30px;
+}
+table tr td{
+    padding: 25px 30px;
+    border-bottom: 1px solid black;
+}
+form{
+    width: 80%;
+    color: white;
+    margin: auto;
+}
+form select{
+    padding: 8px 72px;
+    margin-right: 122px;
+}
+form label{
+    font-size: 1.3rem;
+
+}
+#id_chkin{
+    padding: 20px;
+    font-size: 4rem;
+}
+.sub-btn{
+    padding: 12px 72px;
+    margin: 25px 5rem;
+    color: white;
+    border-radius: 33px;
+    background-color: blue;
+}
+.sub-btn:hover{
+    background-color: white;
+    color: blue;
+}
+form input{
+    padding: 8px 100px;
+    margin: 15px 45px;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital System</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Style/index.css' %}">
+</head>
+
+<body>
+    <nav>
+        <h3>
+            <a href="/">Hospital System</a>
+        </h3>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="{% url 'add-user' %}">Add User</a></li>
+            <li><a href="{% url 'check-in' %}">Check-In</a></li>
+            <li><a href="{% url 'check-out' %}">Check-Out</a></li>
+        </ul>
+    </nav>
+
+    {% block content %}
+    <h1 class="heading_h1">Hospital System</h1>
+
+
+    <div class="options">
+        <div class="btns">
+            <a href="{% url 'check-in' %}" class="btn">
+                Check-In
+            </a>
+            <a href="{% url 'check-out' %}" class="btn">
+                Check-Out
+            </a>
+        </div>
+    </div>
+    {% endblock content %}
+
+
+    {% block data %}
+    <section class="data">
+
+    <h2 class="heading_h1">Our Records</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>User</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Disease</th>
+            <th>Check In</th>
+        </tr>
+        {% for i in checked_in %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.user.name}}</td>
+            <td>{{i.user.phn}}</td>
+            <td>{{i.user.email}}</td>
+            <td>{{i.user.disease}}</td>
+            <td>{{i.chkin_date}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</section>
+
+    {% endblock data %}
+
+
+    <footer>
+        <p>&copy All Right Reserved</p>
+    </footer>
+
+</body>
+
+</html>
